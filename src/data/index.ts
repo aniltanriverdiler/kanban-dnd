@@ -1,11 +1,5 @@
 export const taskData = [
   {
-    title: "Express Myself",
-    description: "Set the building on fire.",
-    status: "To Do",
-    assignee: "Lyla Harper",
-  },
-  {
     title: "Code Review",
     description: "Check the new PRs and leave comments.",
     status: "In Progress",
@@ -20,14 +14,8 @@ export const taskData = [
   {
     title: "Client Meeting",
     description: "Discuss Q3 roadmap with stakeholders.",
-    status: "Completed",
-    assignee: "Noah Bennett",
-  },
-  {
-    title: "Create Landing Page",
-    description: "Design and develop hero section.",
     status: "In Progress",
-    assignee: "Ava Collins",
+    assignee: "Noah Bennett",
   },
   {
     title: "Write Unit Tests",
@@ -38,85 +26,13 @@ export const taskData = [
   {
     title: "Deploy to Staging",
     description: "Push latest build to staging environment.",
-    status: "Completed",
+    status: "In Progress",
     assignee: "Mia Turner",
-  },
-  {
-    title: "Update Readme",
-    description: "Add new setup instructions.",
-    status: "To Do",
-    assignee: "Jack Hayes",
   },
   {
     title: "Refactor API Service",
     description: "Improve structure and error handling.",
-    status: "In Progress",
+    status: "To Do",
     assignee: "Emily Scott",
-  },
-  {
-    title: "Create Animations",
-    description: "Add loading and transition animations.",
-    status: "To Do",
-    assignee: "Liam Brooks",
-  },
-  {
-    title: "Setup Auth Flow",
-    description: "Implement JWT authentication.",
-    status: "In Progress",
-    assignee: "Sophia Rivera",
-  },
-  {
-    title: "Optimize Images",
-    description: "Compress assets for faster loading.",
-    status: "Completed",
-    assignee: "Benjamin Foster",
-  },
-  {
-    title: "Fix Mobile Layout",
-    description: "Resolve responsiveness issues on iOS.",
-    status: "To Do",
-    assignee: "Chloe Simmons",
-  },
-  {
-    title: "Database Migration",
-    description: "Migrate users table to new schema.",
-    status: "In Progress",
-    assignee: "Henry Carter",
-  },
-  {
-    title: "Add Dark Mode",
-    description: "Implement dark theme toggle.",
-    status: "To Do",
-    assignee: "Grace Nguyen",
-  },
-  {
-    title: "Design Review",
-    description: "Review Figma files with UI team.",
-    status: "Completed",
-    assignee: "Sebastian Moore",
-  },
-  {
-    title: "User Feedback Analysis",
-    description: "Summarize key pain points.",
-    status: "To Do",
-    assignee: "Natalie Ward",
-  },
-  {
-    title: "Implement Notifications",
-    description: "Add push notification support.",
-    status: "In Progress",
-    assignee: "Owen Parker",
-  },
-  {
-    title: "Set Up CI/CD",
-    description: "Integrate with GitHub Actions.",
-    status: "Completed",
-    assignee: "Isla Ramirez",
-  },
-  {
-    title: "Clean Up Codebase",
-    description: "Remove unused imports and comments.",
-    status: "To Do",
-    assignee: "Daniel Morgan",
   },
 ];

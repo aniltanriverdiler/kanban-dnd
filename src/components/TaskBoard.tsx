@@ -78,9 +78,9 @@ function TaskBoard({ tasks, setTasks }: TaskBoardProps) {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen bg-transparent">
       <DragDropContext onDragEnd={onDragEnd}>
-        <div className="flex gap-10 p-6">
+        <div className="flex gap-8 md:gap-12 lg:gap-16 p-2 md:p-6">
           {statuses.map((status) => (
             <TaskColumn
               key={status}

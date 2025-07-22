@@ -12,29 +12,20 @@ function TaskCard({ task, index }: TaskCardProps) {
       {(provided) => (
         /* Card Section */
         <div
-          className="max-w-sm mb-1 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+          className="max-w-sm mb-1 bg-gradient-to-br from-gray-100 via-blue-50 to-green-100 dark:from-gray-800 dark:via-blue-950 dark:to-green-950 border border-blue-200 dark:border-blue-900 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-200 cursor-pointer group"
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
         >
-          <a href="#">
-            <img
-              className="rounded-t-lg"
-              src="/docs/images/blog/image-1.jpg"
-              alt=""
-            />
-          </a>
           <div className="p-5">
-            <a href="#">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                {task.title}
-              </h5>
-            </a>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <h5 className="mb-2 text-xl font-bold tracking-wide text-blue-900 group-hover:text-green-700 dark:text-blue-100 dark:group-hover:text-green-200 transition-colors duration-200">
+              {task.title}
+            </h5>
+            <p className="mb-2 font-medium text-gray-700 group-hover:text-gray-900 dark:text-gray-300 dark:group-hover:text-gray-100 transition-colors duration-200">
               {task.description}
             </p>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Assigned: {task.assignee}
+            <p className="mb-1 font-semibold text-green-700 text-sm dark:text-green-300">
+              Assigned: <span className="text-blue-800 dark:text-blue-200">{task.assignee}</span>
             </p>
           </div>
         </div>
