@@ -23,7 +23,7 @@ function AddTaskForm({ addTask }: AddTaskFormProps) {
     e.preventDefault();
 
     if (!title || !description || !assignee) {
-      setError("Tüm alanların doldurulması gerekmektedir.");
+      setError("All fields must be filled in.");
       return;
     }
 
@@ -52,7 +52,7 @@ function AddTaskForm({ addTask }: AddTaskFormProps) {
         className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         type="button"
       >
-        Yeni Görev Ekle
+        Add New Task
       </button>
 
       {/* Modal */}
@@ -67,7 +67,7 @@ function AddTaskForm({ addTask }: AddTaskFormProps) {
               {/* Modal Header */}
               <div className="flex items-center justify-between p-4 md:p-5 border-b border-gray-200 rounded-t dark:border-gray-600">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  Yeni Görev Ekle
+                  Add New Task
                 </h3>
                 <button
                   onClick={toggleModal}
@@ -88,7 +88,7 @@ function AddTaskForm({ addTask }: AddTaskFormProps) {
                       d="M1 1l6 6m0 0l6 6M7 7l6-6M7 7L1 13"
                     />
                   </svg>
-                  <span className="sr-only">Ekle</span>
+                  <span className="sr-only">Add</span>
                 </button>
               </div>
               <div className="flex ps-5 pt-5">
@@ -105,13 +105,13 @@ function AddTaskForm({ addTask }: AddTaskFormProps) {
                       htmlFor="name"
                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
-                      Başlık
+                      Title
                     </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
-                      placeholder="Görev Başlığı Giriniz..."
+                      placeholder="Enter Task Title..."
                       value={title}
                       onChange={(e) => setTitle(e.target.value)}
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white"
@@ -123,13 +123,13 @@ function AddTaskForm({ addTask }: AddTaskFormProps) {
                       htmlFor="name"
                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
-                      Açıklama
+                      Description
                     </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
-                      placeholder="Açıklama Giriniz..."
+                      placeholder="Enter description..."
                       value={description}
                       onChange={(e) => setDescription(e.target.value)}
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white"
@@ -141,13 +141,13 @@ function AddTaskForm({ addTask }: AddTaskFormProps) {
                       htmlFor="name"
                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
-                      Atanan Kişi
+                      Assigned Person
                     </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
-                      placeholder="Atanan Kişiyi Giriniz..."
+                      placeholder="Enter Assigned Person..."
                       value={assignee}
                       onChange={(e) => setAssignee(e.target.value)}
                       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white"

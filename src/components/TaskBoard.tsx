@@ -8,7 +8,7 @@ interface TaskBoardProps {
   setTasks: React.Dispatch<React.SetStateAction<TaskProps[]>>;
 }
 
-// Statüleri burada tanımlıyoruz
+// Defining statuses here
 const statuses = ["To Do", "In Progress", "Done"];
 
 function TaskBoard({ tasks, setTasks }: TaskBoardProps) {
@@ -16,7 +16,7 @@ function TaskBoard({ tasks, setTasks }: TaskBoardProps) {
     console.log("Drag Result:", result);
     const { destination, source, draggableId } = result;
 
-    // Eğer bırakılacak hedef yoksa ya da konum değişmemişse çık
+    // Exit if there's no drop target or position hasn't changed
     if (!destination) return;
     if (
       destination.droppableId === source.droppableId &&
@@ -25,28 +25,28 @@ function TaskBoard({ tasks, setTasks }: TaskBoardProps) {
       return;
     }
 
-    // Taşınan görevi bul
+    // Locate the dragged task
     const draggedTask = tasks.find((task) => task.id === draggableId);
     if (!draggedTask) {
-      console.error(`Görev bulunamadı: ${draggableId}`);
+      console.error(`The task could not be found: ${draggableId}`);
       return;
     }
 
-    // Görev statüsünü güncelle
+    // Update task status
     const updatedTask: TaskProps = {
       ...draggedTask,
       status: destination.droppableId,
     };
 
-    // Görevi listeden çıkar
+    // Remove the task from the list
     const newTasks = tasks.filter((task) => task.id !== draggableId);
 
-    // Hedef kolondaki görevleri filtrele
+    // Filter tasks belonging to the destination column
     const destinationTasks = newTasks.filter(
       (task) => task.status === destination.droppableId
     );
 
-    // Görev hangi index'e eklenecek?
+    // At which index should the task be added?
     let insertAt = 0;
     if (destination.index === 0) {
       const firstTaskInDestination = newTasks.find(
@@ -66,14 +66,14 @@ function TaskBoard({ tasks, setTasks }: TaskBoardProps) {
       }
     }
 
-    // Güncellenmiş görev listesini oluştur
+    // Create the updated task list
     const finalTasks = [
       ...newTasks.slice(0, insertAt),
       updatedTask,
       ...newTasks.slice(insertAt),
     ];
 
-    // Görevleri güncelle
+    // Update tasks
     setTasks(finalTasks);
   };
 

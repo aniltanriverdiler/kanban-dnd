@@ -34,7 +34,7 @@ function TaskCard({ task, index }: TaskCardProps) {
               {task.description}
             </p>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Atanan: {task.assignee}
+              Assigned: {task.assignee}
             </p>
           </div>
         </div>
